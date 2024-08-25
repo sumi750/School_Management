@@ -4,7 +4,7 @@ const haversine = require("haversine");
 const cors = require("cors");
 
 const app = express();
-const port = 4200;
+const PORT = process.env.PORT || 4200;
 
 //MiddleWare
 app.use(cors());
@@ -70,6 +70,6 @@ app.get('/listSchools', (req, res) => {
     });
 });
 
-app.listen(port, ()=>{
-    console.log("Server is listing on port", port);
+app.listen(PORT, ()=>{
+    console.log("Server is listing on port", PORT);
 })
